@@ -1,8 +1,18 @@
-import ControlledForm from "./DesignPatterns/Controled-Uncontrolled.jsx/controlled/ControlledForm";
-import UncontrolledForm from "./DesignPatterns/Controled-Uncontrolled.jsx/uncontrolled/UncontrolledForm";
+import { useState } from "react";
+import ControlledModal from "./DesignPatterns/Controled-Uncontrolled.jsx/controlled/ControlledModal";
 
 function App() {
-  return <ControlledForm />;
+  const [show, setSow] = useState(false);
+  return (
+    <>
+      <button onClick={() => setSow((prev) => !prev)}>
+        {show ? "Hide" : "show"}
+      </button>
+      <ControlledModal show={show} setShow={setSow}>
+        <div>hello</div>
+      </ControlledModal>
+    </>
+  );
 }
 
 export default App;
