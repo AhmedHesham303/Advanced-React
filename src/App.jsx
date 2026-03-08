@@ -8,7 +8,7 @@ function App() {
       <button onClick={() => setSow((prev) => !prev)}>
         {show ? "Hide" : "show"}
       </button>
-      <ControlledModal show={show} setShow={setSow}>
+      <ControlledModal show={show} onClose={() => setSow(false)}>
         <div>hello</div>
       </ControlledModal>
     </>

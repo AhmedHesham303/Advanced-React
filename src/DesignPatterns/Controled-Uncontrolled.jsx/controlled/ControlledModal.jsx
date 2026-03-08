@@ -19,17 +19,13 @@ const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
 `;
-function ControlledModal({ children, show, setShow }) {
-  const handleClose = () => {
-    setShow(false);
-  };
-
+function ControlledModal({ children, show, onClose }) {
   return (
     <>
       {show && (
-        <ModalBackground onClick={handleClose}>
+        <ModalBackground onClick={onClose}>
           <ModalContent onClick={(e) => e.stopPropagation()}>
-            <button onClick={handleClose}>Hide modal</button>
+            <button onClick={onClose}>Hide modal</button>
 
             {children}
           </ModalContent>
