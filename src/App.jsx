@@ -1,16 +1,10 @@
-import { useState } from "react";
-import ControlledModal from "./DesignPatterns/Controled-Uncontrolled.jsx/controlled/ControlledModal";
-
+import { withCheckingProps } from "./DesignPatterns/HOC/withCheckingProps";
+import { UserInfo } from "./components/user-info";
 function App() {
-  const [show, setSow] = useState(false);
+  const UserInfoWrapper = withCheckingProps(UserInfo);
   return (
     <>
-      <button onClick={() => setSow((prev) => !prev)}>
-        {show ? "Hide" : "show"}
-      </button>
-      <ControlledModal show={show} onClose={() => setSow(false)}>
-        <div>hello</div>
-      </ControlledModal>
+      <UserInfoWrapper test={"test"} />
     </>
   );
 }
