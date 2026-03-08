@@ -1,7 +1,8 @@
+import ControlledForm from "./DesignPatterns/Controled-Uncontrolled.jsx/controlled/ControlledForm";
 import UncontrolledForm from "./DesignPatterns/Controled-Uncontrolled.jsx/uncontrolled/UncontrolledForm";
 
 function App() {
-  return <UncontrolledForm />;
+  return <ControlledForm />;
 }
 
 export default App;
