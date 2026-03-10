@@ -1,7 +1,13 @@
-import ParentComponent from "./components/observer/parent";
+import { Button } from "./DesignSystem/componentDevelopment/buttun";
+import { GlobalStyles } from "./DesignSystem/componentDevelopment/style/Global.style";
 
 function App() {
-  return <ParentComponent />;
+  return (
+    <>
+      <Button>Click me</Button>
+      {/* <GlobalStyles /> */}
+    </>
+  );
 }
 
 export default App;
