@@ -1,5 +1,3 @@
-import { emitter } from "../../App";
-
 const Buttons = (props) => {
   const onIncrementCounter = () => {
     emitter.emit("increment");
