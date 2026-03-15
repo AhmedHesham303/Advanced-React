@@ -1,6 +1,8 @@
+import type { ChangeEventHandler } from "react";
+
 type DashnoardProps = {
   inputName: string;
-  handleChange: () => void;
+  handleChange: ChangeEventHandler<HTMLInputElement>;
 };
 const Dashboard = ({ inputName, handleChange }: DashnoardProps) => {
   return (
